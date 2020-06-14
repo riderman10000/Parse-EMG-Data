@@ -9,14 +9,12 @@
 
 > Extracts top 10 most occurred words in the dataset of EMG-UKA-Trial-Corpus, both sound and EMG signals
 
-![GitHub Logo](/images/Top_10.png) 
+![Top ten list](/images/Top_10.png) 
 
 ### Usage
 Copy the files **parse words from speech.py** and **parse words.py** inside the dataset folder path_to_dataset/UKA_Trial_LabelsFixed/ and tweak to get the data you want.
 
 But can unzip the **Top 10 Words.zip** and **Top 10 Words emg.zip**, then test your ML model to classify and predict the words. 
 
-https://img.shields.io/badge/made%20by-Bot--Ro--Bot-blue
-=======
-# Parse-EMG-Data
->>>>>>> d3b072844492aab99ccb7acc673748156017d3d3
+![creator](https://img.shields.io/badge/made%20by-Bot--Ro--Bot-blue)
+
