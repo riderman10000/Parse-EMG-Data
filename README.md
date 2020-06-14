@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Parse-EMG-Data
 
 ## Description
