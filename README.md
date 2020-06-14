@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Parse-EMG-Data
 
 ## Description
@@ -16,3 +17,6 @@ Copy the files **parse words from speech.py** and **parse words.py** inside the 
 But can unzip the **Top 10 Words.zip** and **Top 10 Words emg.zip**, then test your ML model to classify and predict the words. 
 
 https://img.shields.io/badge/made%20by-Bot--Ro--Bot-blue
+=======
+# Parse-EMG-Data
+>>>>>>> d3b072844492aab99ccb7acc673748156017d3d3
