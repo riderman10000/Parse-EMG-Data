@@ -3,7 +3,7 @@ import numpy as np
 
 
 class Features:
-	def __init__(self,words,window_size,sampling_rate,len_max_array):
+	def __init__(self,words = [], window_size = 40, sampling_rate = 16000, len_max_array = None):
 		self.words = words
 		self.window_size = window_size
 		self.SR = sampling_rate
@@ -18,22 +18,43 @@ class Features:
 		self.spec_features = self.compute_spectral_features()
 
 	def compute_temporal_features(self):
-		print("Extracting temporal features")
+		# print("Extracting temporal features")
 		keep = 0
 		for word in self.words:
 			keep+=1
 			if keep%100==0:
 				print("-",end=" ")
 			f = []
-			for i in range(self.num_windows):
+			for i in range(int(self.num_windows)):
 				seg = word[i*self.step_size:(i+1)*self.step_size]
 				temp = [ self.RMS(seg) , self.Mean(seg), np.min(seg),np.std(seg),np.max(seg) ]
 				f.append(np.array(temp))
 			f.append(np.array(temp))
 			f = np.nan_to_num(np.hstack(f))
 			self.features.append(f)
-		print("\n")
 		return np.vstack(self.features)
+
+	def compute_temporal_features(self, word):
+		# print("Extracting temporal features")
+		self.words = word
+		keep = 0
+
+		# print(self.words)
+		
+		for word in self.words:
+			keep+=1
+			if keep%100==0:
+				print("-",end=" ")
+			f = []
+			for i in range(int(self.num_windows)):
+				seg = word[i*self.step_size:(i+1)*self.step_size]
+				temp = [ np.sqrt(np.mean(np.power(seg,2))), np.mean(seg), np.min(seg), np.std(seg), np.max(seg)]
+				f.append(np.array(temp))
+			f.append(np.array(temp))
+			f = np.nan_to_num(np.hstack(f))
+			self.features.append(f)
+		return np.vstack(self.features)
+		#'''
 
 	def compute_spectral_features(self):
 		spec_features = []

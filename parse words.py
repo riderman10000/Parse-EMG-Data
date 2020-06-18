@@ -112,12 +112,8 @@ temp_df = temp_df.sort_values("Occurances",ascending=False)
 temp_df.reset_index(drop=True, inplace=True) 
 temp_df.index += 1
 print(temp_df.head(15))
-<<<<<<< HEAD
 temp_df = temp_df.head(10)
 temp_df.to_excel("Word count.xlsx")
-=======
-# temp_df.to_excel("Word count.xlsx")
->>>>>>> d3b072844492aab99ccb7acc673748156017d3d3
 
 x_data = temp_df["Words"].values.tolist()
 y_data = temp_df["Occurances"].values.tolist()

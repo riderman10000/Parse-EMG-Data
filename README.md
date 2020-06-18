@@ -6,7 +6,7 @@
 
 > Dataset for this project can be collected from http://csl.anthropomatik.kit.edu, only the trial version is choosen for this project
 
-> Extracts top 10 most occurred words in the dataset of EMG-UKA-Trial-Corpus, both sound and EMG signals
+>Extracts top 10 most occurred words in the dataset of EMG-UKA-Trial-Corpus, both sound and EMG signals
 
 ![Top ten list](/images/Top_10.png) 
 
